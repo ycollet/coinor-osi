@@ -35,7 +35,7 @@ Under Windows, with Visual Studio:
 - Clone the repository
 - Copy all the files from coinor-osi to Osi-0.108.5 (for example)
 - In Osi-0.108.5 create a build directory (mkdir build)
-- In Osi-0.108.5/build, launch 'cmake -DCMAKE_INSTALL_PREFIX=/opt/osi-0.108.5 -DCMAKE_BUILD_TYPE=RELEASE -G "NMake Makefiles" ..'
+- In Osi-0.108.5/build, launch 'cmake -DCMAKE_INSTALL_PREFIX=d:/osi-0.108.5 -DCMAKE_BUILD_TYPE=RELEASE -G "NMake Makefiles" ..'
 - In Osi-0.108.5/build, launch 'cmake-gui .' to fine tune the configuration
 - Make the libraries: nmake
 - Install the libraries: nmake install
@@ -172,7 +172,7 @@ Be careful to activate the right set of tests (not the long one).
  c:/MinGW64/MinGW64/bin/mingw32-make.exe install
 ```
 
-- copy libgfortran-3.dll libquadmath-0.dll libgcc_s_seh-1.dll libwinpthread.dll from c:\MinGW64\MinGW64\bin to
+ - copy libgfortran-3.dll libquadmath-0.dll libgcc_s_seh-1.dll libwinpthread.dll from c:\MinGW64\MinGW64\bin to
    c:/lapack-3.7.0/bin
  - zip c:/lapack-3.7.0 to lapack-3.7.0.zip
 
