@@ -129,6 +129,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
 include(coin-macros)
 include(GetAcInitVersion)
 include(CheckCLinkerFlag)
+include(GNUInstallDirs)
 
 #------------------------------------------------------------
 # Detect 64 bits
@@ -446,7 +447,7 @@ add_custom_target(uninstall
 # git clone https://github.com/coin-or/coinbrew
 # coinbrew/coinbrew fetch --git --main-proj="Osi"
 set(BuildTools_DIR    ${COIN_DIR}/../BuildTools)
-set(CoinUtils_DIR     ${COIN_DIR}/../CoinUtils)
+set(CoinUtils_DIR     ${COIN_DIR}/../CoinUtils/CoinUtils)
 set(CoinUtilsTest_DIR ${COIN_DIR}/../CoinUtils/CoinUtils/test)
 set(Osi_DIR           ${COIN_DIR}/Osi)
 
@@ -798,7 +799,7 @@ endif ()
 
 if (WIN32)
   install(DIRECTORY ${CMAKE_BINARY_DIR}/bin
-          DESTINATION bin
+          DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}
           PATTERN "*.dll")
 endif ()
 
